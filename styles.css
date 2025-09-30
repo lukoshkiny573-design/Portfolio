@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.parallax {
+    height: 400px; /* Высота секции с фоном */
+    background-attachment: fixed; /* Фон фиксируется при прокрутке */
+    background-position: center; /* Центрируем фон */
+    background-repeat: no-repeat; /* Не повторяем фон */
+    background-size: cover; /* Используем целиком изображение */
+}
+
+.content {
+    height: 400px; /* Высота секции с контентом */
+    background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный фон для контента */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.wrapper {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 3px;
+}
+
+.section {
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 0 5px #000;
+}
+
+.parallax::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-attachment: fixed;
+    transform: translateZ(-1px) scale(2.0);
+    background-size: 100%;
+    z-index: -1;
+}
+
+.static {
+    background: aqua;
+}
