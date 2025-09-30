@@ -4,7 +4,7 @@ body {
 }
 
 .parallax {
-    background-image: url('IMG_7702.jpeg');
+    background-image: url('IMG_8139.jpeg');
     height: 100vh; /* Высота секции с фоном */
     background-attachment: fixed; /* Фон фиксируется при прокрутке */
     background-position: center; /* Центрируем фон */
