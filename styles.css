@@ -4,7 +4,8 @@ body {
 }
 
 .parallax {
-    height: 400px; /* Высота секции с фоном */
+    background-image: url('IMG_7702.jpeg');
+    height: 100vh; /* Высота секции с фоном */
     background-attachment: fixed; /* Фон фиксируется при прокрутке */
     background-position: center; /* Центрируем фон */
     background-repeat: no-repeat; /* Не повторяем фон */
@@ -12,7 +13,7 @@ body {
 }
 
 .content {
-    height: 400px; /* Высота секции с контентом */
+    height: 100vh; /* Высота секции с контентом */
     background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный фон для контента */
     display: flex;
     align-items: center;
@@ -35,8 +36,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
-    text-shadow: 0 0 5px #000;
+    text-shadow: 0 0 3px #fff;
 }
 
 .parallax::after {
@@ -46,12 +48,25 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background-attachment: fixed;
     transform: translateZ(-1px) scale(2.0);
     background-size: 100%;
     z-index: -1;
 }
-
 .static {
     background: aqua;
+}
+.conclusion {
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-top: 20px;
+}
+@media (max-width: 768px) {
+    .content, .section {
+        height: auto;
+        padding: 15px;
+    }
+    .parallax {
+        height: 300px;
+    }
 }
